@@ -111,7 +111,7 @@ function submit() {
     submit_btn.innerText = "Submitting...";
     sendRequest("submit", { email: email, code: code, language: language });
 
-    //Redirect to main blind coding page
+    location.href="index.html"
 }
 
 tabs.forEach((element) => {

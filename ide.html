@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="logo.jpg" type="image/jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="api.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Blind Coding IDE</title>
+</head>
+
+<body>
+    <header>
+        <p id="question"></p>
+        <div>
+            <button id="lifeline" class="main-btn" onclick="use_lifeline()">Use Lifeline <span
+                    id="lifeline-count">5</span></button>
+            <button id="submit" class="main-btn" style="padding: 15px; margin-left: 10px;" onclick="submit()">Submit All
+                Questions</button>
+        </div>
+    </header>
+    <div class="tabs">
+        <button id="tab1" tab=0 class="tab" style="background-color: #424959;">Question 1</button>
+        <button id="tab2" tab=1 class="tab">Question 2</button>
+        <button id="tab3" tab=2 class="tab">Question 3</button>
+    </div>
+    <div class="container">
+        <div class="problem-statement"></div>
+        <div class="line-numbers"></div>
+        <textarea
+            onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+            spellcheck="false" id="editor" oncontextmenu="return false"
+            placeholder="Enter your code here..."></textarea>
+        <div id="status">Idle</div>
+    </div>
+
+    <div class="popup" style="display: none;">
+        <div class="popup-content">
+            ⚠️ Leaving this page will result in disqualification
+        </div>
+    </div>
+    <div id="details" class="popup">
+        <img src="BlindCode.jpg">
+        <div class="popup-content">
+            <br>
+            <input type="email" id="email" placeholder="Enter your email">
+            <br>
+            <br>
+            
+            <select id="language">
+                <option value="java">Java</option>
+                <option value="c">C</option>
+                <option value="c++">C++</option>
+                <option value="python">Python</option>
+                <option value="javascript">Javascript</option>
+                <option value="C#">C#</option>
+            </select>
+            <br>
+            <center>
+            <button onclick="save_details()">Submit</button>
+        </center>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

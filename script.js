@@ -1,8 +1,8 @@
-//if (localStorage.getItem("allowed") == "fadlse") {
-  //  location.replace(
-    //    "https://media.tenor.com/-ZLLANZU3lsAAAAd/ashneer-grover-shark-tank-india-memes.gif"
-    //);
-//}
+if (localStorage.getItem("allowed") == "false") {
+    location.replace(
+        "https://media.tenor.com/-ZLLANZU3lsAAAAd/ashneer-grover-shark-tank-india-memes.gif"
+    );
+}
 
 questions_title = ["Q1. Lemonade Stand", "Q2. Checking target product pairs", "Q3. Magical Text Encryption/Decryption"];
 questions_description = [
@@ -140,7 +140,7 @@ function use_lifeline() {
         setTimeout(function () {
             editor.style.color = "transparent";
             editor.style.caretColor = "transparent";
-        }, 5000);
+        }, 8000);
 
         if (lifeline_count == 0) {
             lifeline.disabled = true;
